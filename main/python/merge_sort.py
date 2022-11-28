@@ -2,15 +2,15 @@ from random import shuffle
 
 ARRAY_LENGTH = 10
 
-def mergeSort(array):
+def merge_sort(array):
     if len(array) > 1:
         i = j = k = 0
 
         mid = len(array)//2
         L = array[:mid]
         R = array[mid:]
-        mergeSort(L)
-        mergeSort(R)
+        merge_sort(L)
+        merge_sort(R)
         
  
         while i < len(L) and j < len(R):
@@ -39,6 +39,6 @@ for n in range(ARRAY_LENGTH):
 
 shuffle(array)
 
-mergeSort(array)
+merge_sort(array)
 
 print(array)

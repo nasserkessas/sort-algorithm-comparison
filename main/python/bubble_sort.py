@@ -2,7 +2,7 @@ from random import shuffle
 
 ARRAY_LENGTH = 100
 
-def bubbleSort(array):
+def bubble_sort(array):
     for i in range(ARRAY_LENGTH):
         for j in range(0, ARRAY_LENGTH-i-1):
              if array[j] > array[j+1]:
@@ -17,4 +17,4 @@ for n in range(ARRAY_LENGTH):
 
 shuffle(array)
 
-bubbleSort(array)
+bubble_sort(array)
