@@ -1,7 +1,5 @@
 from random import shuffle
 
-ARRAY_LENGTH = 10
-
 def merge_sort(array):
     if len(array) > 1:
         i = j = k = 0
@@ -11,7 +9,6 @@ def merge_sort(array):
         R = array[mid:]
         merge_sort(L)
         merge_sort(R)
-        
  
         while i < len(L) and j < len(R):
             if L[i] <= R[j]:
@@ -32,13 +29,4 @@ def merge_sort(array):
             j += 1
             k += 1
 
-array = []
-
-for n in range(ARRAY_LENGTH):
-    array.append(n+1)
-
-shuffle(array)
-
-merge_sort(array)
-
-print(array)
+    return array
