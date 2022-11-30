@@ -9,7 +9,7 @@ def comb_sort(array):
         for i in range(0, len(array)-gap):
             if array[i] > array[i + gap]:
                 temp = array[i]
-                array[i]=array[i + gap]
+                array[i] = array[i + gap]
                 array[i + gap] = temp
                 swapped = True
     

@@ -11,7 +11,9 @@ def insertion_sort(array, left, right):
     for i in range(left + 1, right + 1):
         j = i
         while j > left and array[j] < array[j - 1]:
-            array[j], array[j - 1] = array[j - 1], array[j]
+            temp = array[j]
+            array[j] = array[j-1]
+            array[j-1] = temp
             j -= 1
  
 def merge(array, l, m, r):

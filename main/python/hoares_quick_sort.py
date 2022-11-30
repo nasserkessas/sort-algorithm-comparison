@@ -1,6 +1,5 @@
 def hoares_quick_sort(array):
     def _quicksort(array, low, high):
-        # must run partition on sections with 2 elements or more
         if low < high: 
             p = partition(array, low, high)
             _quicksort(array, low, p)
@@ -14,7 +13,9 @@ def hoares_quick_sort(array):
                 high -= 1
             if low >= high:
                 return high
-            array[low], array[high] = array[high], array[low]
+            temp = array[low]
+            array[low] = array[high]
+            array[high] = temp
             low += 1
             high -= 1
     _quicksort(array, 0, len(array)-1)

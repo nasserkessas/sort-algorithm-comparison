@@ -3,8 +3,12 @@ def partition(array, begin, end):
     for i in range(begin+1, end+1):
         if array[i] <= array[begin]:
             pivot += 1
-            array[i], array[pivot] = array[pivot], array[i]
-    array[pivot], array[begin] = array[begin], array[pivot]
+            temp = array[i]
+            array[i] = array[pivot]
+            array[pivot] = temp
+    temp = array[pivot]
+    array[pivot] = array[begin]
+    array[begin] = temp
     return pivot
 
 def quick_sort(array, begin=0, end=None):
