@@ -1,2 +1,3 @@
-main/python/__pycache__
 .vscode
+main/python/algorithms/__pycache__
+main/python/test/data.json
