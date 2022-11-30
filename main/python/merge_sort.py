@@ -1,14 +1,18 @@
 def merge_sort(array):
-    if len(array) > 1:
+    n = len(array)
+    if n > 1:
         i = j = k = 0
 
-        mid = len(array)//2
+        mid = n//2
         L = array[:mid]
         R = array[mid:]
         merge_sort(L)
         merge_sort(R)
+
+        nL = len(L)
+        nR = len(R)
  
-        while i < len(L) and j < len(R):
+        while i < nL and j < nR:
             if L[i] <= R[j]:
                 array[k] = L[i]
                 i += 1
@@ -17,12 +21,12 @@ def merge_sort(array):
                 j += 1
             k += 1
  
-        while i < len(L):
+        while i < nL:
             array[k] = L[i]
             i += 1
             k += 1
  
-        while j < len(R):
+        while j < nR:
             array[k] = R[j]
             j += 1
             k += 1

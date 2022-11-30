@@ -1,7 +1,8 @@
 def selection_sort(array):
-    for i in range(len(array)):
+    n = len(array)
+    for i in range(n):
         min_idx = i
-        for j in range(i+1, len(array)):
+        for j in range(i+1, n):
             if array[min_idx] > array[j]:
                 min_idx = j
         temp = array[i]
