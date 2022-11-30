@@ -1,5 +1,3 @@
-from random import shuffle
-
 def merge_sort(array):
     if len(array) > 1:
         i = j = k = 0
