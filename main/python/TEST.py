@@ -38,6 +38,6 @@ for t in range(TRIALS):
 
         data[algorithm.__name__].append((end - start).total_seconds() * 10**3)
 
-print(f"Average time to sort an array of {ARRAY_LENGTH} shuffled sequential numbers (done {TRIALS} times):")
+print(f"Average time to sort an array of {ARRAY_LENGTH} shuffled sequential numbers (tested {TRIALS} times):")
 for a in data:
     print(f"{a.replace('_', ' ').capitalize()} {' ' * (max_name_length-len(a))} {(sum(data[a])/len(data[a])):.3f}ms")
