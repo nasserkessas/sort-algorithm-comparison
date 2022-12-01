@@ -15,8 +15,8 @@ from hoares_quick_sort import hoares_quick_sort
 from tim_sort import tim_sort
 from heap_sort import heap_sort
 
-# algorithms = [bubble_sort, comb_sort, insertion_sort, merge_sort, radix_sort, selection_sort, quick_sort, hoares_quick_sort, tim_sort, heap_sort]
-algorithms = [comb_sort, merge_sort, radix_sort, quick_sort, hoares_quick_sort, tim_sort, heap_sort] # removed slow algorithms for better graph
+algorithms = [bubble_sort, comb_sort, insertion_sort, merge_sort, radix_sort, selection_sort, quick_sort, hoares_quick_sort, tim_sort, heap_sort]
+# algorithms = [comb_sort, merge_sort, radix_sort, quick_sort, hoares_quick_sort, tim_sort, heap_sort] # removed slow algorithms for better graph
 max_name_length = (len(max(map(lambda a: a.__name__, algorithms), key=len)))
 
 ARRAY_LENGTH_START = 50
