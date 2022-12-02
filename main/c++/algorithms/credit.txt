@@ -1,0 +1,1 @@
+All the C++ sort algorithm code in this folder is modified from that in the Python folder to suit the language
