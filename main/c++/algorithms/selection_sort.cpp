@@ -1,4 +1,5 @@
 #include "sort.h"
+
 void selection_sort(int *array, int len) {
     for (int i = 0; i < len; i++) {
         int min_idx = i;

@@ -18,6 +18,7 @@ class Sort {
             combSort,
             selectionSort,
             insertionSort,
+            heapSort,
             invalid,
         };
 
@@ -26,6 +27,7 @@ class Sort {
             if (strcmp(inString, "comb sort") == 0) return combSort;
             if (strcmp(inString, "selection sort") == 0) return selectionSort;
             if (strcmp(inString, "insertion sort") == 0) return insertionSort;
+            if (strcmp(inString, "heap sort") == 0) return heapSort;
             return invalid;
         }
 
@@ -62,6 +64,10 @@ class Sort {
                 insertion_sort(array, len);
                 break;
 
+            case heapSort:
+                heap_sort(array, len);
+                break;
+
             case invalid:
                 printf("Unknown sorting algorithm: \"%s\"", algorithm);
                 exit(1);
@@ -86,7 +92,7 @@ int main() {
 
     s.print();
 
-    s.sort((char *) "selection sort");
+    s.sort((char *) "heap sort");
 
     s.print();
 
