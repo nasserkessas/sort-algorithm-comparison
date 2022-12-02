@@ -1,4 +1,4 @@
-#include "algorithms.h"
+#include "sort.h"
 
 int *bubble_sort (int *array, int len) {
     for (int i = 0; i < len; i++) {
