@@ -1,3 +1,9 @@
+# VS code config
 .vscode
+
+# Python files
 main/python/algorithms/__pycache__
 main/python/test/data.json
+
+# C++ files
+main/c++/algorithms/bin
