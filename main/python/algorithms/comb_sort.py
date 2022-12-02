@@ -2,7 +2,7 @@ def comb_sort(array):
     n = len(array)
     gap = n
     swapped = True
-    while gap !=1 or swapped == 1:
+    while gap !=1 or swapped == False:
         gap = (gap * 10)//13
         if gap < 1: gap = 1
 
