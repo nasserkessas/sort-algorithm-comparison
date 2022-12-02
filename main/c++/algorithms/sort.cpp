@@ -16,12 +16,14 @@ class Sort {
         enum algorithm {
             bubbleSort,
             combSort,
+            selectionSort,
             invalid,
         };
 
         algorithm hash (char *inString) {
             if (strcmp(inString, "bubble sort") == 0) return bubbleSort;
             if (strcmp(inString, "comb sort") == 0) return combSort;
+            if (strcmp(inString, "selection sort") == 0) return selectionSort;
             return invalid;
         }
 
@@ -49,8 +51,13 @@ class Sort {
             case combSort:
                 array = comb_sort(array, len);
                 break;
+            
+            case selectionSort:
+                array = selection_sort(array, len);
+                break;
 
             case invalid:
+                printf("Unknown sorting algorithm: \"%s\"", algorithm);
                 exit(1);
             }
         }
@@ -73,7 +80,7 @@ int main() {
 
     s.print();
 
-    s.sort((char *) "comb sort");
+    s.sort((char *) "selection sort");
 
     s.print();
 
