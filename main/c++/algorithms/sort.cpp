@@ -5,6 +5,8 @@
 
 #include "sort.h"
 
+#define ARRAY_LENGTH 100
+
 class Sort {
 
     private:
@@ -13,11 +15,13 @@ class Sort {
 
         enum algorithm {
             bubbleSort,
+            combSort,
             invalid,
         };
 
         algorithm hash (char *inString) {
             if (strcmp(inString, "bubble sort") == 0) return bubbleSort;
+            if (strcmp(inString, "comb sort") == 0) return combSort;
             return invalid;
         }
 
@@ -41,6 +45,13 @@ class Sort {
             case bubbleSort:
                 array = bubble_sort(array, len);
                 break;
+
+            case combSort:
+                array = comb_sort(array, len);
+                break;
+
+            case invalid:
+                exit(1);
             }
         }
 
@@ -50,12 +61,19 @@ class Sort {
 };
 
 int main() {
-    int arr[] = {3,1,4,2};
+    int arr[ARRAY_LENGTH];
+
+    for (int i = 0; i < ARRAY_LENGTH; i++) {
+        arr[i] = i+1;
+    }
+
+    shuffle(arr, (size_t) ARRAY_LENGTH);
+
     Sort s(arr);
 
     s.print();
 
-    s.sort((char *) "bubble sort");
+    s.sort((char *) "comb sort");
 
     s.print();
 
