@@ -17,6 +17,7 @@ class Sort {
             bubbleSort,
             combSort,
             selectionSort,
+            insertionSort,
             invalid,
         };
 
@@ -24,6 +25,7 @@ class Sort {
             if (strcmp(inString, "bubble sort") == 0) return bubbleSort;
             if (strcmp(inString, "comb sort") == 0) return combSort;
             if (strcmp(inString, "selection sort") == 0) return selectionSort;
+            if (strcmp(inString, "insertion sort") == 0) return insertionSort;
             return invalid;
         }
 
@@ -54,6 +56,10 @@ class Sort {
             
             case selectionSort:
                 selection_sort(array, len);
+                break;
+
+            case insertionSort:
+                insertion_sort(array, len);
                 break;
 
             case invalid:
