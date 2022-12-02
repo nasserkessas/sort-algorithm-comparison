@@ -1,6 +1,6 @@
 #include "sort.h"
 
-int *bubble_sort (int *array, int len) {
+void bubble_sort (int *array, int len) {
     for (int i = 0; i < len; i++) {
         for (int j = 0; j < len-i-1; j++){
             if (array[j] > array[j+1]) {
@@ -10,5 +10,4 @@ int *bubble_sort (int *array, int len) {
             }
         }
     }
-    return array;
 }

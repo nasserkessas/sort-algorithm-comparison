@@ -2,7 +2,7 @@
 
 #include "sort.h"
 
-int *comb_sort (int *array, int len) {
+void comb_sort (int *array, int len) {
     int gap = len;
     bool swapped = true;
     while (gap !=1 || swapped == false) {
@@ -21,5 +21,4 @@ int *comb_sort (int *array, int len) {
             }
         }
     }
-    return array;
 }

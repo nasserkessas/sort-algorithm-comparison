@@ -1,6 +1,5 @@
 #include "sort.h"
-
-int *selection_sort(int *array, int len) {
+void selection_sort(int *array, int len) {
     for (int i = 0; i < len; i++) {
         int min_idx = i;
         for (int j = i+1; j < len; j++) {
@@ -12,5 +11,4 @@ int *selection_sort(int *array, int len) {
         array[i] = array[min_idx];
         array[min_idx] = temp;
     }
-    return array;
 }

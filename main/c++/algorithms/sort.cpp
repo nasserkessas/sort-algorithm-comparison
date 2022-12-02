@@ -45,15 +45,15 @@ class Sort {
         void sort (char *algorithm) {
             switch (hash(algorithm)) {
             case bubbleSort:
-                array = bubble_sort(array, len);
+                bubble_sort(array, len);
                 break;
 
             case combSort:
-                array = comb_sort(array, len);
+                comb_sort(array, len);
                 break;
             
             case selectionSort:
-                array = selection_sort(array, len);
+                selection_sort(array, len);
                 break;
 
             case invalid:
